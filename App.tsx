@@ -22,8 +22,6 @@ import {
   View,
 } from 'react-native';
 
-import { Colors } from 'react-native/Libraries/NewAppScreen';
-
 const veryfiLensCredentials = {
   url: 'XXX',
   clientId: 'XXX',
