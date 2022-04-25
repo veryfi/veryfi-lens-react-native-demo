@@ -14,8 +14,9 @@ You can read further about Lens in Veryfi's dedicated page: https://www.veryfi.c
 
 ## Table of content
 1. [Configuration](#configuration)
-2. [Other platforms](#other_platforms)
-3. [Get in contact with our team](#contact)
+2. [iOS Localization](#localization)
+3. [Other platforms](#other_platforms)
+4. [Get in contact with our team](#contact)
 
 ### Configuration <a name="configuration"></a>
 - Make sure your SSH key has been granted access to Veryfi's private repository [here](https://hub.veryfi.com/api/settings/keys/#package-managers-container). Also make sure your SSH key has been added to ssh-agent by running this command in the Terminal:
@@ -44,6 +45,16 @@ const veryfiLensCredentials = {
 - Run `pod repo update` and `pod install` on the iOS folder.
 - Start metro running `npx react-native start`.
 - Run your desired platform using: `npx react-native run-android` or `npx react-native run-ios`
+
+### iOS Localization (Optional) <a name="localization"></a>
+- In order to be able to enable iOS Lens native localization you need to enable a supported language on the project file:
+![Step 1](https://raw.githubusercontent.com/veryfi/veryfi-lens-react-native-demo/main/github_assets/localization-step1.png)
+
+- Generate  localization files for the desired language (for example in storyboard):
+![Step 2](https://raw.githubusercontent.com/veryfi/veryfi-lens-react-native-demo/main/github_assets/localization-step2.png)
+
+- At the end you should have at least 1 file localized for each language that you want to enable localization, see example:
+![Step 3](https://raw.githubusercontent.com/veryfi/veryfi-lens-react-native-demo/main/github_assets/localization-step3.png)
 
 ### Other platforms <a name="other_platforms"></a>
 We also support the following wrappers for native and hybrid frameworks:
