@@ -19,11 +19,6 @@ You can read further about Lens in Veryfi's dedicated page: https://www.veryfi.c
 4. [Get in contact with our team](#contact)
 
 ### Configuration <a name="configuration"></a>
-- Make sure your SSH key has been granted access to Veryfi's private repository [here](https://hub.veryfi.com/api/settings/keys/#package-managers-container). Also make sure your SSH key has been added to ssh-agent by running this command in the Terminal:
-```
-# Replace /path/to/private_key with the actual path to your SSH private key
-ssh-add -K /path/to/private_key
-```
 - Go to Lens: Maven (Android) section and generate your access credentials [here](https://hub.veryfi.com/api/settings/keys/#package-managers-container).
 - Add your Maven credentials to your system environment. Replace [USERNAME] and [PASSWORD] with the credentials that were set up in the previous step.
 ```
@@ -32,7 +27,10 @@ export MAVEN_VERYFI_PASSWORD=[PASSWORD]
 ```
 
 - Clone this repository
-- Run `yarn add "https://bitbucket.org/veryfi/react-native-veryfi-lens.git#<VERSION>"` to install VeryfiLens.
+- Run `yarn add https://[REACT_USERNAME]:[REACT_PASSWORD]@repo.veryfi.com/shared/lens/react-native-veryfi-lens.git#[VERSION]` to install VeryfiLens.
+Replace `[REACT_USERNAME]` and `[REACT_PASSWORD]` with the credentials that were set up in the previous step.
+Replace `[VERSION]` with the actual version of the plugin you wish to add to your project, e.g. `1.0.0`
+
 - Replace credentials in `App.tsx` with yours
 ```
 const veryfiLensCredentials = {
