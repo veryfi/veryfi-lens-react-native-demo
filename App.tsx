@@ -8,8 +8,8 @@
  * @format
  */
 
-import React, { useState } from 'react';
-import VeryfiLens from 'react-native-veryfi-lens';
+import React, {useState} from 'react';
+import VeryfiLens from '@veryfi/react-native-veryfi-lens';
 import {
   Image,
   NativeEventEmitter,
@@ -35,7 +35,7 @@ const veryfiLensSettings = {
 };
 
 const VeryfiLensEmitter = new NativeEventEmitter(VeryfiLens.NativeModule);
-var hasListeners = false;
+let hasListeners = false;
 
 const App = () => {
   const [log, setLog] = useState(
@@ -98,8 +98,8 @@ const App = () => {
     <SafeAreaView style={styles.background}>
       <StatusBar barStyle={'dark-content'} />
       <View style={styles.background}>
-        <Text style={styles.title}> {`Welcome to Veryfi Lens Demo`} </Text>
-        <Image style={styles.thumbnail} source={{ uri: thumbnail }} />
+        <Text style={styles.title}> {'Welcome to Veryfi Lens Demo'} </Text>
+        <Image style={styles.thumbnail} source={{uri: thumbnail}} />
         <View style={styles.logBox}>
           <ScrollView contentInsetAdjustmentBehavior="automatic">
             <Text style={styles.logText}>{log}</Text>
@@ -107,15 +107,7 @@ const App = () => {
         </View>
         <View style={styles.veryfiButton}>
           <TouchableOpacity onPress={showCamera}>
-            <Text
-              style={{
-                fontSize: 14,
-                fontWeight: 'bold',
-                alignSelf: 'center',
-                marginTop: 2,
-              }}>
-              COLLECT
-            </Text>
+            <Text style={styles.textBoldCenter}>COLLECT</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -169,6 +161,12 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     width: 200,
     height: 200,
+  },
+  textBoldCenter: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    alignSelf: 'center',
+    marginTop: 2,
   },
 });
 
