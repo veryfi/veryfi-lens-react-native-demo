@@ -33,6 +33,8 @@ const veryfiLensSettings = {
   blurDetectionIsOn: true,
   autoLightDetectionIsOn: false,
   documentTypes: ['receipt'],
+  showDocumentTypes: true,
+  dataExtractionEngine: 'api',
 };
 
 const VeryfiLensEmitter = new NativeEventEmitter(VeryfiLens.NativeModule);
