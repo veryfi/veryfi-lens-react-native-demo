@@ -10,7 +10,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "@veryfi/react-native-veryfi-lens": "^1.2.0",
+    "@veryfi/react-native-veryfi-lens": "1.1.2",
     "react": "17.0.2",
     "react-native": "0.68.1",
     "react-native-remote-svg": "^2.0.10"
