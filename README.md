@@ -42,7 +42,7 @@ const veryfiLensCredentials = {
   apiKey: 'yourApiKey',
 };
 ```
-- Run `pod repo update` and `pod install` on the iOS folder.
+- Run `pod install` on the iOS folder.
 - Start metro running `npx react-native start`.
 - Run your desired platform using: `npx react-native run-android` or `npx react-native run-ios`
 
