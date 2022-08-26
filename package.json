@@ -10,10 +10,10 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@veryfi/react-native-veryfi-lens": "1.1.2",
     "react": "17.0.2",
     "react-native": "0.68.1",
-    "react-native-remote-svg": "^2.0.7",
-    "react-native-veryfi-lens": "ssh://bitbucket.org/veryfi/react-native-veryfi-lens.git"
+    "react-native-remote-svg": "^2.0.10"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

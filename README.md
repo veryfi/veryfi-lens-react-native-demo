@@ -27,9 +27,11 @@ export MAVEN_VERYFI_PASSWORD=[PASSWORD]
 ```
 
 - Clone this repository
-- Run `yarn add https://[REACT_USERNAME]:[REACT_PASSWORD]@repo.veryfi.com/shared/lens/react-native-veryfi-lens.git#[VERSION]` to install VeryfiLens.
-Replace `[REACT_USERNAME]` and `[REACT_PASSWORD]` with the credentials that were set up in the previous step.
-Replace `[VERSION]` with the actual version of the plugin you wish to add to your project, e.g. `1.0.0`
+- Go to Lens: React Native (iOS + Android) section and generate your access credentials [here](https://hub.veryfi.com/api/settings/keys/#package-managers-container).
+- Run `npm config set @veryfi:registry https://nexus.veryfi.com/repository/npm/`
+- Run `npm config set _auth $(echo -n '[USERNAME]:[PASSWORD]' | openssl base64) --registry=https://nexus.veryfi.com/repository/npm`
+- Run `npm i @veryfi/react-native-veryfi-lens`
+- Replace [USERNAME] and [PASSWORD] with the credentials that were set up in the previous step.
 
 - Replace credentials in `App.tsx` with yours
 ```
@@ -40,7 +42,7 @@ const veryfiLensCredentials = {
   apiKey: 'yourApiKey',
 };
 ```
-- Run `pod repo update` and `pod install` on the iOS folder.
+- Run `pod install` on the iOS folder.
 - Start metro running `npx react-native start`.
 - Run your desired platform using: `npx react-native run-android` or `npx react-native run-ios`
 
