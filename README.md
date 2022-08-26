@@ -59,7 +59,7 @@ const veryfiLensCredentials = {
 ### Other platforms <a name="other_platforms"></a>
 We also support the following wrappers for native and hybrid frameworks:
 - [Cordova](https://hub.veryfi.com/lens/docs/cordova/)
-- [React Native](https://hub.veryfi.com/lens/docs/react-native/)
+- [Capacitor](https://hub.veryfi.com/lens/docs/capacitor/)
 - [Flutter](https://hub.veryfi.com/lens/docs/flutter/)
 - [Xamarin](https://hub.veryfi.com/lens/docs/xamarin/)
 - [iOS](https://hub.veryfi.com/lens/docs/ios/)
