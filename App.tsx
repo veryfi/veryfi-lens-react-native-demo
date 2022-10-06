@@ -8,8 +8,15 @@
  * @format
  */
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import VeryfiLens from '@veryfi/react-native-veryfi-lens';
+import {
+  VERYFI_CLIENT_ID,
+  VERYFI_USERNAME,
+  VERYFI_API_KEY,
+  VERYFI_URL,
+} from '@env';
+
 import {
   Image,
   NativeEventEmitter,
@@ -23,10 +30,10 @@ import {
 } from 'react-native';
 
 const veryfiLensCredentials = {
-  url: 'XXX',
-  clientId: 'XXX',
-  userName: 'XXX',
-  apiKey: 'XXX',
+  url: VERYFI_URL,
+  clientId: VERYFI_CLIENT_ID,
+  userName: VERYFI_USERNAME,
+  apiKey: VERYFI_API_KEY,
 };
 
 const veryfiLensSettings = {
@@ -102,7 +109,7 @@ const App = () => {
       <StatusBar barStyle={'dark-content'} />
       <View style={styles.background}>
         <Text style={styles.title}> {'Welcome to Veryfi Lens Demo'} </Text>
-        <Image style={styles.thumbnail} source={{uri: thumbnail}} />
+        <Image style={styles.thumbnail} source={{ uri: thumbnail }} />
         <View style={styles.logBox}>
           <ScrollView contentInsetAdjustmentBehavior="automatic">
             <Text style={styles.logText}>{log}</Text>

@@ -60,3 +60,6 @@ buck-out/
 /ios/Pods/
 /vendor/bundle/
 ios/Podfile.lock
+
+# Env variables
+.env
