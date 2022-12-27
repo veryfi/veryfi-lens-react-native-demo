@@ -10,7 +10,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "@veryfi/react-native-veryfi-lens": "^1.2.3",
+    "@veryfi/react-native-veryfi-lens": "^1.3.0",
     "react": "17.0.2",
     "react-native": "0.68.1",
     "react-native-dotenv": "^3.3.1",
