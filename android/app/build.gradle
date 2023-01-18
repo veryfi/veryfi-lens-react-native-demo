@@ -135,7 +135,7 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.veryfi_lens_react_native_demo"
+        applicationId "com.veryfi.react"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -180,6 +180,7 @@ android {
     }
 
     aaptOptions {
+        cruncherEnabled = false
         noCompress "veryfi"
     }
 
