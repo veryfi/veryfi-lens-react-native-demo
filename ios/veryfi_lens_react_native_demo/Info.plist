@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
@@ -35,8 +35,20 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Enrich your data with business meetings and events from your Calendar</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Scan Documents</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Add your ___@veryfi.cc assigned email address for reference</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Helps to identify places around you</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>Helps to identify places around you</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Access Photo Gallery for Document Backups</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Access Photo Gallery for Document Uploads</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -51,19 +63,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-  <key>NSCameraUsageDescription</key>
-  <string>Scan Documents</string>
-  <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-  <string>Helps to identify places around you</string>
-  <key>NSLocationWhenInUseUsageDescription</key>
-  <string>Helps to identify places around you</string>
-  <key>NSPhotoLibraryAddUsageDescription</key>
-  <string>Access Photo Gallery for Document Backups</string>
-  <key>NSPhotoLibraryUsageDescription</key>
-  <string>Access Photo Gallery for Document Uploads</string>
-  <key>NSContactsUsageDescription</key>
-  <string>Add your ___@veryfi.cc assigned email address for reference</string>
-  <key>NSCalendarsUsageDescription</key>
-  <string>Enrich your data with business meetings and events from your Calendar</string>
 </dict>
 </plist>
