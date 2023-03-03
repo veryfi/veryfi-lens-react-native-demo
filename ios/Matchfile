@@ -1,0 +1,10 @@
+
+
+storage_mode("git")
+
+git_url("git@gitlab.services.veryfi.com:manhattan/mobile/veryfi-ios-certificates.git")
+
+type("development") # The default type, can be: appstore, adhoc, enterprise or development
+
+app_identifier(["com.veryfi.lensdemo.reactnative"])
+username("cicd@veryfi.com")

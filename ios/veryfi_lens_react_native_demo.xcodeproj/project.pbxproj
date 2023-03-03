@@ -483,8 +483,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 0;
-				DEVELOPMENT_TEAM = PVK8E2NA4T;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = PVK8E2NA4T;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = veryfi_lens_react_native_demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -498,6 +500,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.veryfi.lensdemo.reactnative;
 				PRODUCT_NAME = veryfi_lens_react_native_demo;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match Development com.veryfi.lensdemo.reactnative";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VALIDATE_WORKSPACE = YES;
@@ -511,8 +515,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 0;
-				DEVELOPMENT_TEAM = PVK8E2NA4T;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = PVK8E2NA4T;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = veryfi_lens_react_native_demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -526,6 +533,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.veryfi.lensdemo.reactnative;
 				PRODUCT_NAME = veryfi_lens_react_native_demo;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match AppStore com.veryfi.lensdemo.reactnative";
 				SWIFT_VERSION = 5.0;
 				VALIDATE_WORKSPACE = YES;
 				VERSIONING_SYSTEM = "apple-generic";
