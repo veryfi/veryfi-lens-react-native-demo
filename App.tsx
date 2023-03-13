@@ -8,7 +8,7 @@
  * @format
  */
 
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import VeryfiLens from '@veryfi/react-native-veryfi-lens';
 import {
   VERYFI_CLIENT_ID,
@@ -109,7 +109,7 @@ const App = () => {
       <StatusBar barStyle={'dark-content'} />
       <View style={styles.background}>
         <Text style={styles.title}> {'Welcome to Veryfi Lens Demo'} </Text>
-        <Image style={styles.thumbnail} source={{ uri: thumbnail }} />
+        <Image style={styles.thumbnail} source={{uri: thumbnail}} />
         <View style={styles.logBox}>
           <ScrollView contentInsetAdjustmentBehavior="automatic">
             <Text style={styles.logText}>{log}</Text>
