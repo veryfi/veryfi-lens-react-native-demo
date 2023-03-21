@@ -45,7 +45,6 @@ const veryfiLensSettings = {
 };
 
 const VeryfiLensEmitter = new NativeEventEmitter(VeryfiLens.NativeModule);
-let hasListeners = false;
 
 const App = () => {
   const [log, setLog] = useState(
@@ -72,25 +71,26 @@ const App = () => {
     }
   };
   const setupListeners = () => {
-    if (!hasListeners) {
-      VeryfiLensEmitter.addListener(
-        VeryfiLens.Events.onVeryfiLensClose,
-        updateLog,
-      );
-      VeryfiLensEmitter.addListener(
-        VeryfiLens.Events.onVeryfiLensUpdate,
-        updateLog,
-      );
-      VeryfiLensEmitter.addListener(
-        VeryfiLens.Events.onVeryfiLensError,
-        updateLog,
-      );
-      VeryfiLensEmitter.addListener(
-        VeryfiLens.Events.onVeryfiLensSuccess,
-        updateLog,
-      );
-      hasListeners = true;
-    }
+    VeryfiLensEmitter.removeAllListeners(VeryfiLens.Events.onVeryfiLensClose);
+    VeryfiLensEmitter.removeAllListeners(VeryfiLens.Events.onVeryfiLensUpdate);
+    VeryfiLensEmitter.removeAllListeners(VeryfiLens.Events.onVeryfiLensError);
+    VeryfiLensEmitter.removeAllListeners(VeryfiLens.Events.onVeryfiLensSuccess);
+    VeryfiLensEmitter.addListener(
+      VeryfiLens.Events.onVeryfiLensClose,
+      updateLog,
+    );
+    VeryfiLensEmitter.addListener(
+      VeryfiLens.Events.onVeryfiLensUpdate,
+      updateLog,
+    );
+    VeryfiLensEmitter.addListener(
+      VeryfiLens.Events.onVeryfiLensError,
+      updateLog,
+    );
+    VeryfiLensEmitter.addListener(
+      VeryfiLens.Events.onVeryfiLensSuccess,
+      updateLog,
+    );
   };
 
   const showCamera = () => {
