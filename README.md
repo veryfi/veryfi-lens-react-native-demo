@@ -34,6 +34,15 @@ export MAVEN_VERYFI_PASSWORD=[PASSWORD]
 - Run `npm i @veryfi/react-native-veryfi-lens`
 - Replace [USERNAME] and [PASSWORD] with the credentials that were set up in the previous step.
 
+
+Using yarn 3
+
+```
+yarn config set npmScopes.veryfi.npmRegistryServer "https://nexus.veryfi.com/repository/npm/"
+yarn config set npmScopes.veryfi.npmAlwaysAuth true
+yarn config set npmScopes.veryfi.npmAuthIdent $(echo -n '[NPM_USERNAME]:[NPM_PASSWORD]' | openssl base64 -A)
+```
+
 - Replace credentials in `App.tsx` with yours
 ```
 const veryfiLensCredentials = {
