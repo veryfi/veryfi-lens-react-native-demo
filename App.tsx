@@ -50,8 +50,9 @@ const App = () => {
   const [log, setLog] = useState(
     "   Here you will see JSON results from a scan's data extraction performed by the Veryfi API.\n\n   Look carefully, there are 30+ fields (inc. line items) extracted and understood by Veryfi's AI.\n\n   Before you begin, please find a receipt, bill or invoice. Then when ready, press the green COLLECT button below. This will start the Veryfi Lens camera used to capture, preprocess and prepared the document for real-time data extraction.\n\n If you need help, please contact support@veryfi.com\n\n",
   );
+
   const [thumbnail, setThumbnail] = useState(
-    'https://cdn.veryfi.com/wp-content/uploads/Screen-Shot-2017-11-20-at-12.02.57-PM.png',
+    'https://avatars.githubusercontent.com/u/64030334?s=200&v=4',
   );
   const updateLog = (event: any) => {
     setLog(_log => _log + '\n\n' + JSON.stringify(event, null, ' '));
