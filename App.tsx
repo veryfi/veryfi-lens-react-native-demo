@@ -2,9 +2,6 @@
  * Sample React Native App
  * https://github.com/facebook/react-native
  *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
  * @format
  */
 
@@ -39,7 +36,9 @@ const veryfiLensCredentials = {
 const veryfiLensSettings = {
   blurDetectionIsOn: true,
   autoLightDetectionIsOn: false,
-  documentTypes: ['receipt'],
+  documentTypes: ['check'],
+  checksBackIsOn: true,
+  checksBackIsRequired: true,
   showDocumentTypes: true,
   dataExtractionEngine: 'api',
 };
