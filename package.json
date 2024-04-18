@@ -13,7 +13,7 @@
     "@react-native-community/cli": "^10.2.0",
     "react": "18.2.0",
     "react-native": "0.73.4",
-    "@veryfi/react-native-veryfi-lens": "^1.5.35",
+    "@veryfi/react-native-veryfi-lens": "^1.5.36",
     "react-native-dotenv": "^3.3.1",
     "react-native-eject": "^0.2.0",
     "react-native-remote-svg": "^2.0.10"
