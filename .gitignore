@@ -71,3 +71,4 @@ ios/Podfile.lock
 
 # Env variables
 .env
+.npmrc
