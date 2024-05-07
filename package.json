@@ -10,7 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@react-native-community/cli": "^10.2.0",
+    "@react-native-community/cli": "^10.2.7",
     "@veryfi/react-native-veryfi-lens": "^1.5.38",
     "react": "18.2.0",
     "react-native": "0.74.1",
