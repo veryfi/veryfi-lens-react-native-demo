@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@react-native-community/cli": "^10.2.7",
-    "@veryfi/react-native-veryfi-lens": "^1.5.46",
+    "@veryfi/react-native-veryfi-lens": "^1.5.49",
     "react": "18.2.0",
     "react-native": "0.74.1",
     "react-native-dotenv": "^3.3.1",
