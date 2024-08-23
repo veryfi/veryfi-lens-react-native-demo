@@ -8,8 +8,8 @@
  * @format
  */
 
-import React, {useState} from 'react';
-import VeryfiLens from '@veryfi/react-native-veryfi-lens';
+import React, { useEffect, useRef, useState } from 'react';
+// @ts-ignore
 import {
   VERYFI_CLIENT_ID,
   VERYFI_USERNAME,
@@ -18,6 +18,7 @@ import {
 } from '@env';
 
 import {
+  findNodeHandle,
   Image,
   NativeEventEmitter,
   SafeAreaView,
@@ -28,6 +29,8 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import InfoView from './InfoView.tsx';
+import VeryfiLens from '@veryfi/react-native-veryfi-lens';
 
 const veryfiLensCredentials = {
   url: VERYFI_URL,
@@ -37,16 +40,82 @@ const veryfiLensCredentials = {
 };
 
 const veryfiLensSettings = {
-  blurDetectionIsOn: true,
   autoLightDetectionIsOn: false,
-  documentTypes: ['receipt'],
+  documentTypes: ['receipt', 'other'],
   showDocumentTypes: true,
   dataExtractionEngine: 'api',
+  backupDocsToGallery: false,
+  autoRotateIsOn: false,
+  autoDocDetectionAndCropIsOn: true,
+  blurDetectionIsOn: true,
+  autoSkewCorrectionIsOn: false,
+  autoCropGalleryIsOn: false,
+  fraudDetectionIsOn: true,
+  saveLogsIsOn: true,
+  autoCaptureIsOn: true,
+  moreMenuIsOn: false,
+  multiplePagesCaptureIsOn: false,
+  autoSubmitDocumentOnCapture: false,
+  multipleDocumentsIsOn: false,
+  closeCameraOnSubmit: true,
+  returnStitchedPDF: true,
+  stitchIsOn: false,
+  stitchOtherIsOn: true,
+  stitchTitleIsOn: false,
+  allowSubmitUndetectedDocsIsOn: false,
+  cleanBorderIsOn: false,
+  autoCropBrowserIsOn: true,
+  dewarpingIsOn: false,
+  detectBlurResponseIsOn: true,
+  manualCropIsOn: true,
+  gpuIsOn: true, // Be cautious with GPU settings
+  autoDeleteAfterProcessing: false,
+  showStitchCounterNumber: true,
+  galleryOtherIsOn: false,
+  browseOtherIsOn: false,
+  galleryIcon: true,
+  undoIsOn: false,
+  moreSettingsMenuIsOn: false,
+  pdfPreviewIsOn: true,
+  pdfEditIsOn: false,
+  showLCDIsNotAllowed: true,
+  packageMaxScans: 10,
+  shareLogsIsOn: true, // Turn off for live environments
+  galleryMultipleSelectionIsOn: true,
+  customLensStrings: {
+    en: {
+      RECEIPT: 'Short Receipt',
+      OTHER: 'Multi Page',
+    },
+  },
+  reactTagInfoView: 0,
 };
 
 const VeryfiLensEmitter = new NativeEventEmitter(VeryfiLens.NativeModule);
 
+let isCameraReady = false;
+
 const App = () => {
+  const infoViewRef = useRef<View>(null);
+  useEffect(() => {
+    if (infoViewRef.current) {
+      const infoViewTag = findNodeHandle(infoViewRef.current);
+      if (infoViewTag) {
+        setupListeners();
+        veryfiLensSettings.reactTagInfoView = infoViewTag;
+        VeryfiLens.configureWithCredentials(
+          veryfiLensCredentials,
+          veryfiLensSettings,
+          () => {
+            isCameraReady = true;
+          },
+        );
+      } else {
+        console.error('Error: Unable to find infoViewTag');
+      }
+    }
+  }, []);
+
   const [log, setLog] = useState(
     "   Here you will see JSON results from a scan's data extraction performed by the Veryfi API.\n\n   Look carefully, there are 30+ fields (inc. line items) extracted and understood by Veryfi's AI.\n\n   Before you begin, please find a receipt, bill or invoice. Then when ready, press the green COLLECT button below. This will start the Veryfi Lens camera used to capture, preprocess and prepared the document for real-time data extraction.\n\n If you need help, please contact support@veryfi.com\n\n",
   );
@@ -95,14 +164,9 @@ const App = () => {
   };
 
   const showCamera = () => {
-    setupListeners();
-    VeryfiLens.configureWithCredentials(
-      veryfiLensCredentials,
-      veryfiLensSettings,
-      () => {
-        VeryfiLens.showCamera();
-      },
-    );
+    if (isCameraReady) {
+      VeryfiLens.showCamera();
+    }
   };
 
   return (
@@ -120,6 +184,10 @@ const App = () => {
           <TouchableOpacity onPress={showCamera}>
             <Text style={styles.textBoldCenter}>COLLECT</Text>
           </TouchableOpacity>
+        </View>
+        {/* Hidden InfoView component */}
+        <View style={{ width: 50, height: 50}}>
+          <InfoView ref={infoViewRef} />
         </View>
       </View>
     </SafeAreaView>
