@@ -65,13 +65,13 @@ const veryfiLensCredentials = {
 
 ### iOS Localization (Optional) <a name="localization"></a>
 - In order to be able to enable iOS Lens native localization you need to enable a supported language on the project file:
-![Step 1](https://raw.githubusercontent.com/veryfi/veryfi-lens-react-native-demo/main/github_assets/localization-step1.png)
+![Step 1](https://github.com/user-attachments/assets/8408ef50-0a47-459d-b89b-3b0208322b62)
 
 - Generate  localization files for the desired language (for example in storyboard):
-![Step 2](https://raw.githubusercontent.com/veryfi/veryfi-lens-react-native-demo/main/github_assets/localization-step2.png)
+![Step 2](https://github.com/user-attachments/assets/e44ee792-e8ce-4524-a7e9-c328ef466ceb)
 
 - At the end you should have at least 1 file localized for each language that you want to enable localization, see example:
-![Step 3](https://raw.githubusercontent.com/veryfi/veryfi-lens-react-native-demo/main/github_assets/localization-step3.png)
+![Step 3](https://github.com/user-attachments/assets/698ab01a-416c-47f2-8789-e02fac3d0b7e)
 
 ### Other platforms <a name="other_platforms"></a>
 We also support the following wrappers for native and hybrid frameworks:
