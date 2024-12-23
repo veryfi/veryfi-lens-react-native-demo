@@ -29,7 +29,7 @@ You can watch our video:
 export MAVEN_VERYFI_USERNAME=[USERNAME]
 export MAVEN_VERYFI_PASSWORD=[PASSWORD]
 ```
-Min SDK Android 6.0 (API level 23) 
+Min SDK Android 7.0 (API level 24) 
 
 Min iOS version 12
 
