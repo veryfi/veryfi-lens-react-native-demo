@@ -42,6 +42,7 @@ const veryfiLensSettings = {
   documentTypes: ['receipt'],
   showDocumentTypes: true,
   dataExtractionEngine: 'api',
+  ignoreRemoteSettings: true
 };
 
 const VeryfiLensEmitter = new NativeEventEmitter(VeryfiLens.NativeModule);

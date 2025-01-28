@@ -1,6 +1,6 @@
 {
   "name": "veryfi_lens_react_native_demo",
-  "version": "1.5.66",
+  "version": "1.5.67",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@react-native-community/cli": "^10.2.7",
-    "@veryfi/react-native-veryfi-lens": "^1.5.66",
+    "@veryfi/react-native-veryfi-lens": "^1.5.67",
     "react": "18.2.0",
     "react-native": "0.74.1",
     "react-native-dotenv": "^3.3.1",
