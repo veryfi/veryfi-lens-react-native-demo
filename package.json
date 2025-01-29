@@ -1,6 +1,6 @@
 {
   "name": "veryfi_lens_react_native_demo",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -16,7 +16,7 @@
     "react-native-dotenv": "^3.3.1",
     "react-native-eject": "^0.2.0",
     "react-native-remote-svg": "^2.0.10",
-    "@veryfi/react-native-veryfi-lens": "^2.0.3"
+    "@veryfi/react-native-veryfi-lens": "^2.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
