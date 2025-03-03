@@ -1,6 +1,6 @@
 {
   "name": "veryfi_lens_react_native_demo",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -10,31 +10,31 @@
     "test": "jest"
   },
   "dependencies": {
-    "@react-native-community/cli": "^10.2.7",
-    "react": "18.3.1",
-    "react-native": "0.76.5",
+    "@react-native-community/cli": "15.1.2",
+    "react": "^18.2.0",
+    "react-native": "0.77.1",
     "react-native-dotenv": "^3.3.1",
     "react-native-eject": "^0.2.0",
     "react-native-remote-svg": "^2.0.10",
-    "@veryfi/react-native-veryfi-lens": "^2.0.9"
+    "@veryfi/react-native-veryfi-lens": "^2.0.10"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",
-    "@react-native/babel-preset": "0.76.5",
-    "@react-native/metro-config": "0.76.5",
-    "@react-native/typescript-config": "0.76.5",
+    "@react-native/babel-preset": "0.77.1",
+    "@react-native/metro-config": "0.77.1",
+    "@react-native/typescript-config": "0.77.1",
     "@react-native-community/cli": "15.0.1",
     "@react-native-community/cli-platform-android": "15.0.1",
     "@react-native-community/cli-platform-ios": "15.0.1",
-    "@types/react": "^18.3.1",
-    "@types/react-test-renderer": "^18.3.0",
+    "@types/react": "^18.2.0",
+    "@types/react-test-renderer": "^18.2.0",
     "babel-jest": "^29.6.3",
     "eslint": "^8.19.0",
     "jest": "^29.6.3",
     "prettier": "2.8.8",
-    "react-test-renderer": "18.3.1",
+    "react-test-renderer": "^18.2.0",
     "typescript": "5.0.4"
   },
   "engines": {
