@@ -9,7 +9,7 @@
  */
 
 import React, {useState} from 'react';
-import VeryfiLens from '@veryfi/react-native-veryfi-lens';
+import VeryfiLens from '@veryfi/react-native-veryfi-lens-cheques';
 import {
   VERYFI_CLIENT_ID,
   VERYFI_USERNAME,
@@ -39,10 +39,33 @@ const veryfiLensCredentials = {
 const veryfiLensSettings = {
   blurDetectionIsOn: true,
   autoLightDetectionIsOn: false,
-  documentTypes: ['receipt'],
+  documentTypes: ['check'],
   showDocumentTypes: true,
   dataExtractionEngine: 'api',
-  ignoreRemoteSettings: true
+  ignoreRemoteSettings: true,
+
+  checkSequenceMode: true,
+  customLensStrings: {
+    "en": {
+        "Front of check": "Front of cheque",
+        "Back of check": "Back of cheque",
+        "CHECK": "PHOTO"
+    },
+  },
+  rotateDocIsOn: false,
+  shareLogsIsOn: false,
+  backgroundColorConfirmationScreen: "#32302E",
+  toolbarIconsColor: "#FFFFFF",
+  submitButtonFontColor: "#000000",
+  submitButtonBorderColor: "#FFFFFF",
+  secondaryColor: "#000000",
+  submitButtonBackgroundColor: "#FFFFFF",
+  submitButtonCornerRadius: 25,
+  titleFont: "OpensSans-Bold",
+  buttonFont: "DINPro-Bold",
+  textFont: "OpensSans-Regular",
+  forceLandscapeImage: true,
+  documentTypesTextColor: "#FFFFFF"
 };
 
 const VeryfiLensEmitter = new NativeEventEmitter(VeryfiLens.NativeModule);
