@@ -27,6 +27,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Platform
 } from 'react-native';
 
 const veryfiLensCredentials = {
@@ -61,11 +62,17 @@ const veryfiLensSettings = {
   secondaryColor: "#000000",
   submitButtonBackgroundColor: "#FFFFFF",
   submitButtonCornerRadius: 25,
-  titleFont: "OpensSans-Bold",
-  buttonFont: "DINPro-Bold",
-  textFont: "OpensSans-Regular",
+  titleFont: Platform.OS === 'ios' ? "OpensSans-Bold" : "OpensSans-Bold.ttf",
+  buttonFont: Platform.OS === 'ios' ? "DINPro-Bold" : "OpensSans-Regular.ttf",
+  textFont: Platform.OS === 'ios' ? "OpensSans-Regular" : "OpensSans-Regular.ttf",
   forceLandscapeImage: true,
-  documentTypesTextColor: "#FFFFFF"
+  documentTypesTextColor: "#FFFFFF",
+  buttonFullWidth: true,
+  buttonHeight: Platform.OS === 'ios' ? 52 : 80,
+  buttonHorizontalPadding: 50,
+  buttonTopPadding: 16,
+  buttonFontSize: Platform.OS === 'ios' ? 15 : 18
+
 };
 
 const VeryfiLensEmitter = new NativeEventEmitter(VeryfiLens.NativeModule);
