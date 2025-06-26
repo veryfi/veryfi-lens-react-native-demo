@@ -20,7 +20,6 @@ import {
 import {
   Image,
   NativeEventEmitter,
-  SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
@@ -137,9 +136,9 @@ const App = () => {
   };
 
   return (
-    <SafeAreaView style={styles.background}>
+    <View style={styles.background}>
       <StatusBar barStyle={'dark-content'} />
-      <View style={styles.background}>
+      <View style={styles.backgroundBody}>
         <Text style={styles.title}> {'Welcome to Veryfi Lens Demo'} </Text>
         <Image style={styles.thumbnail} source={{uri: thumbnail}} />
         <View style={styles.logBox}>
@@ -153,7 +152,7 @@ const App = () => {
           </TouchableOpacity>
         </View>
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 
@@ -161,6 +160,11 @@ const styles = StyleSheet.create({
   background: {
     backgroundColor: '#FFFFFF',
     flex: 1,
+  },
+  backgroundBody: {
+    backgroundColor: '#FFFFFF',
+    flex: 1,
+    padding: '5%'
   },
   sectionTitle: {
     fontSize: 24,
