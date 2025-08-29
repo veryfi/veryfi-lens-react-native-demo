@@ -41,7 +41,10 @@ const veryfiLensSettings = {
   documentTypes: ['receipt'],
   showDocumentTypes: true,
   dataExtractionEngine: 'api',
-  ignoreRemoteSettings: true
+  ignoreRemoteSettings: true,
+  moreMenuIsOn: false,
+  isReactNative: false,
+  showHelpButton: true
 };
 
 const VeryfiLensEmitter = new NativeEventEmitter(VeryfiLens.NativeModule);
@@ -76,6 +79,7 @@ const App = () => {
     VeryfiLensEmitter.removeAllListeners(VeryfiLens.Events.onVeryfiLensUpdate);
     VeryfiLensEmitter.removeAllListeners(VeryfiLens.Events.onVeryfiLensError);
     VeryfiLensEmitter.removeAllListeners(VeryfiLens.Events.onVeryfiLensSuccess);
+    VeryfiLensEmitter.removeAllListeners(VeryfiLens.Events.onHelpButtonClicked);
     VeryfiLensEmitter.addListener(
       VeryfiLens.Events.onVeryfiLensClose,
       updateLog,
@@ -92,7 +96,16 @@ const App = () => {
       VeryfiLens.Events.onVeryfiLensSuccess,
       updateLog,
     );
+    VeryfiLensEmitter.addListener(
+      VeryfiLens.Events.onHelpButtonClicked,
+      onHelpButtonClicked
+    );
   };
+
+  const onHelpButtonClicked = () => {
+    // To close the help view, call VeryfiLens.closeHelpScreen() from the HelpView.tsx
+    VeryfiLens.showHelpScreen('HelpView');
+  }
 
   const showCamera = () => {
     setupListeners();
