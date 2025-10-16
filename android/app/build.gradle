@@ -112,9 +112,6 @@ android {
     kotlinOptions {
         kotlinOptions.allWarningsAsErrors = false
     }
-    androidResources {
-        noCompress += "veryfi"
-    }
 }
 
 dependencies {
