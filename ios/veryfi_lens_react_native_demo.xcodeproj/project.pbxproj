@@ -41,7 +41,7 @@
 		141F32DA1D0B6C7FF2F06BD0 /* Pods-veryfi_lens_react_native_demo-veryfi_lens_react_native_demoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veryfi_lens_react_native_demo-veryfi_lens_react_native_demoTests.release.xcconfig"; path = "Target Support Files/Pods-veryfi_lens_react_native_demo-veryfi_lens_react_native_demoTests/Pods-veryfi_lens_react_native_demo-veryfi_lens_react_native_demoTests.release.xcconfig"; sourceTree = "<group>"; };
 		29FC2DD2F21AFEC20E1D181E /* Pods-veryfi_lens_react_native_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veryfi_lens_react_native_demo.debug.xcconfig"; path = "Target Support Files/Pods-veryfi_lens_react_native_demo/Pods-veryfi_lens_react_native_demo.debug.xcconfig"; sourceTree = "<group>"; };
 		48F5CAACB86E066E0A12621C /* libPods-veryfi_lens_react_native_demo-veryfi_lens_react_native_demoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-veryfi_lens_react_native_demo-veryfi_lens_react_native_demoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B13CF64A9BD5CF7EDE824F5 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = veryfi_lens_react_native_demo/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		6B13CF64A9BD5CF7EDE824F5 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = veryfi_lens_react_native_demo/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = veryfi_lens_react_native_demo/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84CD2585BC4FE7919E5D23EA /* Pods-veryfi_lens_react_native_demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veryfi_lens_react_native_demo.release.xcconfig"; path = "Target Support Files/Pods-veryfi_lens_react_native_demo/Pods-veryfi_lens_react_native_demo.release.xcconfig"; sourceTree = "<group>"; };
 		D9A43A3B6FCAD0A2524A540E /* Pods-veryfi_lens_react_native_demo-veryfi_lens_react_native_demoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veryfi_lens_react_native_demo-veryfi_lens_react_native_demoTests.debug.xcconfig"; path = "Target Support Files/Pods-veryfi_lens_react_native_demo-veryfi_lens_react_native_demoTests/Pods-veryfi_lens_react_native_demo-veryfi_lens_react_native_demoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -424,7 +424,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = veryfi_lens_react_native_demoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,7 +448,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = veryfi_lens_react_native_demoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,6 +474,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = veryfi_lens_react_native_demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -500,6 +501,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = veryfi_lens_react_native_demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -582,6 +584,10 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DRCT_REMOVE_LEGACY_ARCH=1",
+				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
@@ -589,6 +595,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
+					"-DRCT_REMOVE_LEGACY_ARCH=1",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -597,6 +604,7 @@
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_ENABLE_EXPLICIT_MODULES = NO;
 				USE_HERMES = true;
 			};
 			name = Debug;
@@ -658,6 +666,10 @@
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DRCT_REMOVE_LEGACY_ARCH=1",
+				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
@@ -665,6 +677,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
+					"-DRCT_REMOVE_LEGACY_ARCH=1",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -672,6 +685,7 @@
 				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				SWIFT_ENABLE_EXPLICIT_MODULES = NO;
 				USE_HERMES = true;
 				VALIDATE_PRODUCT = YES;
 			};
