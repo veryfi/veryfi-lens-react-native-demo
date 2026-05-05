@@ -12,6 +12,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		6B7844252FAA883B00E7D99E /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7844242FAA883B00E7D99E /* Template.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8F251E355D19569AED818746 /* libPods-veryfi_lens_react_native_demo-veryfi_lens_react_native_demoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F5CAACB86E066E0A12621C /* libPods-veryfi_lens_react_native_demo-veryfi_lens_react_native_demoTests.a */; };
 		FA69CEA218B375C5BA364439 /* libPods-veryfi_lens_react_native_demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE16069C0D70D954517D4C4 /* libPods-veryfi_lens_react_native_demo.a */; };
@@ -42,6 +43,8 @@
 		29FC2DD2F21AFEC20E1D181E /* Pods-veryfi_lens_react_native_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veryfi_lens_react_native_demo.debug.xcconfig"; path = "Target Support Files/Pods-veryfi_lens_react_native_demo/Pods-veryfi_lens_react_native_demo.debug.xcconfig"; sourceTree = "<group>"; };
 		48F5CAACB86E066E0A12621C /* libPods-veryfi_lens_react_native_demo-veryfi_lens_react_native_demoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-veryfi_lens_react_native_demo-veryfi_lens_react_native_demoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B13CF64A9BD5CF7EDE824F5 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = veryfi_lens_react_native_demo/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		6B7844232FAA883B00E7D99E /* veryfi_lens_react_native_demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "veryfi_lens_react_native_demo-Bridging-Header.h"; sourceTree = "<group>"; };
+		6B7844242FAA883B00E7D99E /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = veryfi_lens_react_native_demo/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84CD2585BC4FE7919E5D23EA /* Pods-veryfi_lens_react_native_demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veryfi_lens_react_native_demo.release.xcconfig"; path = "Target Support Files/Pods-veryfi_lens_react_native_demo/Pods-veryfi_lens_react_native_demo.release.xcconfig"; sourceTree = "<group>"; };
 		D9A43A3B6FCAD0A2524A540E /* Pods-veryfi_lens_react_native_demo-veryfi_lens_react_native_demoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veryfi_lens_react_native_demo-veryfi_lens_react_native_demoTests.debug.xcconfig"; path = "Target Support Files/Pods-veryfi_lens_react_native_demo-veryfi_lens_react_native_demoTests/Pods-veryfi_lens_react_native_demo-veryfi_lens_react_native_demoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +100,8 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 				6B13CF64A9BD5CF7EDE824F5 /* PrivacyInfo.xcprivacy */,
+				6B7844242FAA883B00E7D99E /* Template.swift */,
+				6B7844232FAA883B00E7D99E /* veryfi_lens_react_native_demo-Bridging-Header.h */,
 			);
 			name = veryfi_lens_react_native_demo;
 			sourceTree = "<group>";
@@ -211,7 +216,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 2640;
 					};
 				};
 			};
@@ -398,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B7844252FAA883B00E7D99E /* Template.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -487,6 +493,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = veryfi_lens_react_native_demo;
+				SWIFT_OBJC_BRIDGING_HEADER = "veryfi_lens_react_native_demo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -514,6 +521,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = veryfi_lens_react_native_demo;
+				SWIFT_OBJC_BRIDGING_HEADER = "veryfi_lens_react_native_demo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
