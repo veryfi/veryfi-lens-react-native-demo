@@ -9,7 +9,7 @@
  */
 
 import React, {useState} from 'react';
-import VeryfiLens from '@veryfi/react-native-veryfi-lens';
+import VeryfiLens from '@veryfi/react-native-veryfi-lens-field-detection';
 import {
   VERYFI_CLIENT_ID,
   VERYFI_USERNAME,

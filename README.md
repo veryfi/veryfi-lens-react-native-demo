@@ -38,7 +38,7 @@ Min iOS version 12
 - Run `npm config set @veryfi:registry https://nexus.veryfi.com/repository/npm/`
 - Run `echo "//nexus.veryfi.com/repository/npm/:username=[USERNAME]" >> ~/.npmrc`
 - Run `echo "//nexus.veryfi.com/repository/npm/:_password=$(echo -n [PASSWORD] | base64)" >> ~/.npmrc`
-- Run `npm i @veryfi/react-native-veryfi-lens`
+- Run `npm i @veryfi/react-native-veryfi-lens-field-detection`
 - Replace [USERNAME] and [PASSWORD] with the credentials that were set up in the previous step.
 
 

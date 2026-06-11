@@ -1,4 +1,4 @@
-import VeryfiLens from '@veryfi/react-native-veryfi-lens';
+import VeryfiLens from '@veryfi/react-native-veryfi-lens-field-detection';
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
