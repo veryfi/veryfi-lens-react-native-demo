@@ -7,6 +7,7 @@ description: >-
   receipts, checks, credit cards, business cards, barcodes, OCR strips/caps,
   W-2, and W-9, plus Any-Documents support escalation. Use when adding Veryfi
   Lens to React Native, wiring listeners, or choosing a document recipe.
+  Covers Lens analytics events and notification subscription (events.md).
 ---
 
 # Veryfi Lens React Native
@@ -142,3 +143,7 @@ When generating host code, produce:
 3. One presentation call inside the success callback
 4. The recipe dictionary with a one-line comment per non-obvious flag
 5. A short conflict note, Android Full limits for credit cards and codes, and any Unconfirmed item the host relies on
+
+## Analytics and metrics
+
+Lens already records interaction events. When the host wants those metrics, subscribe as in [events.md](events.md). Use the event names listed there. Do not invent names. On Android, register `com.veryfi.lens.VeryfiLensSecureAnalyticsEvent`, not the deprecated `com.veryfi.lens.VeryfiLensAnalyticsEvent`. A plugin host calls the plugin observe API instead of registering that broadcast itself.
