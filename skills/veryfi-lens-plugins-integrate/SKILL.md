@@ -8,6 +8,7 @@ description: >-
   events, and callbacks from the pinned plugin sources. Use when adding Veryfi
   Lens to Cordova, React Native, Flutter, Capacitor, MAUI, or Xamarin, or when
   a plugin method, setting, or event is in question.
+  Covers Lens analytics events and notification subscription (events.md).
 ---
 
 # Veryfi Lens plugins
@@ -153,3 +154,7 @@ Plugin route:
 - Quote an XCFramework or AAR size as the installed app-size increase
 - Leave `dictateIsOn` true
 - Leave `ignoreRemoteSettings` false unless the host wants dashboard `lens_settings` to override the recipe
+
+## Analytics and metrics
+
+Lens already records interaction events. When the host wants those metrics, subscribe as in [events.md](events.md). Use the event names listed there. Do not invent names. On Android, register `com.veryfi.lens.VeryfiLensSecureAnalyticsEvent`, not the deprecated `com.veryfi.lens.VeryfiLensAnalyticsEvent`. A plugin host calls the plugin observe API instead of registering that broadcast itself.
